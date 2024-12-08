@@ -6,7 +6,7 @@
   "description": "Adds a up and down buttons on instagram web mobile interface.",
 
   "icons": {
-    "48": "icons/icon.png"
+    "240": "icons/icon.png"
   },
 
   "content_scripts": [
@@ -14,5 +14,12 @@
       "matches": ["*://*.instagram.com/reels/*"],
       "js": ["main.js"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "instagram-scroll-button@the-r3aper7"
+    }
+  }
+
 }

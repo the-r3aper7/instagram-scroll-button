@@ -1,9 +1,6 @@
 const reelsMap = new Map()
 const feedContainerClass = ".xilefcg"
 const reelClass = ".x1winvzj"
-const arrowUp = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 11l-6 -6" /><path d="M6 11l6 -6" /></svg>`
-const arrowDown = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 13l-6 6" /><path d="M6 13l6 6" /></svg>` 
-
 let currentlyViewing = 0
 
 const intersectionObserver = new IntersectionObserver((entries) => {
@@ -61,13 +58,14 @@ function addButtons(targetElement) {
   `
   
   const upButton = document.createElement("button") 
-  upButton.innerHTML = arrowUp
+  upButton.innerHTML = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 11l-6 -6" /><path d="M6 11l6 -6" /></svg>`
   upButton.style.cssText = buttonStyle
   upButton.addEventListener('mouseover', () => upButton.style.opacity = '1')
   upButton.addEventListener('mouseout', () => upButton.style.opacity = '0.8')
 
   const downButton = document.createElement("button")
-  downButton.innerHTML = arrowDown 
+  downButton.innerHTML = `<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M18 13l-6 6" /><path d="M6 13l6 6" /></svg>` 
+ 
   downButton.style.cssText = buttonStyle
   downButton.addEventListener('mouseover', () => downButton.style.opacity = '1')
   downButton.addEventListener('mouseout', () => downButton.style.opacity = '0.8')
