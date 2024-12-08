@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Instagram Scroll Button",
+  "version": "1.1",
+
+  "description": "Adds a up and down buttons on instagram web mobile interface.",
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/reels/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
